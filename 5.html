@@ -1,0 +1,105 @@
+<html>
+<head>
+	<title>Laba 5</title>
+	<meta charset="utf-8">
+	<script  src="5.js"></script>
+	<link href="5.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div style='height:50px'>
+		<input type="button" name="ad" onclick="a()" value="Задача 1">
+	</div>
+	<div style='height:50px'>
+		<input type="button" name="af" onclick="as()" value="Задача 2">
+		<input type="textarea" id="f">
+	</div>
+	<div style='height:60px'>
+		<input type="button" name="asd" onclick="asd()" value="Копировать">
+		<input type="button" name="casd" onclick="clasd()" value="Стереть оба">
+		<input type="textarea" id="pole1">
+		<input type="textarea" id="pole2" disabled>
+	</div>
+	<div style='height:auto'>
+		<form id="form1">
+		<input  id="row" placeholder="Строки" type="number" style='width:50px'>
+		<input  id="col" placeholder="Столбцы" type="number" style='width:60px'>
+		<input type="button" id="create" value='Create' onclick="table()">
+		<button onclick="table1.parentNode.removeChild('table1');">Очистить</button>
+		<table id='table1'></table>
+		</form>
+	</div>
+
+
+    <div id="calc-contain">
+    <form name="calculator">
+    <input type="text" id="answer" value="" placeholder="0" disabled>
+    <input type="button" id='C' value="c" onclick="cleand()">
+    <input type="button" id='/' value="/" class="delit" 
+    onclick="delit()">
+	<input type="button" id='7' value="7" class="delit"
+	onclick="sem()">
+    <input type="button" id='8' value="8" class="delit"
+	onclick="vosem()">
+    <input type="button" id='9' value="9" class="delit"
+    onclick="nina()">
+    <input type="button" id='x' value="x" class="delit"
+    onclick="mnog()">
+    <input type="button" id='4' value="4" class="delit"
+    onclick="chet()">
+    <input type="button" id='5' value="5" class="delit"
+    onclick="pyat()">
+    <input type="button" id='6' value="6" class="delit"
+    onclick="six()">
+    <input type="button" id='-' value="-" class="delit"
+    onclick="minus()">	
+    <input type="button" id='1' value="1" class="delit"
+    onclick="odin()">
+    <input type="button" id='2' value="2" class="delit"
+    onclick="dva()">
+    <input type="button" id='3' value="3" class="delit"
+    onclick="tri()">
+    <input type="button" id='+' value="+" class="delit"
+    onclick="plus()">
+    <input type="button" id='nol'  value="0" 
+    onclick="nul()">
+    <input type="button" id='ravno' value="=" 
+    onclick="result()">
+<br>
+    </form>
+    </div>
+    <br>
+    <div style="width:200px; height: 200px; float: left;">
+    	<form id="Forma">
+    	<input type="button" id="cr1" class="crest" onclick="crest('cr1')" value=".">
+    	<input type="button" id="cr2" class="crest" onclick="crest('cr2')"value=".">
+    	<input type="button" id="cr3" class="crest" onclick="crest('cr3')"value=".">
+<br>
+    	<input type="button" id="cr4" class="crest" onclick="crest('cr4')"value=".">
+    	<input type="button" id="cr5" class="crest" onclick="crest('cr5')"value=".">
+    	<input type="button" id="cr6" class="crest" onclick="crest('cr6')"value=".">
+<br>
+    	<input type="button" id="cr7" class="crest" onclick="crest('cr7')"value=".">
+    	<input type="button" id="cr8" class="crest" onclick="crest('cr8')"value=".">
+    	<input type="button" id="cr9" class="crest" onclick="crest('cr9')"value=".">
+    	<button onclick="Forma.parentNode.removeChild('Forma');">Очистить</button>
+    </form>
+    </div>
+	<div class="soderj"></div>
+	<div class="soderj2"></div>
+	<div id="scrollToTop" onclick="goUp();">&uarr;</div>
+	<script type="text/javascript">
+		window.onscroll = function() {
+   		var scrollElem = document.getElementById("scrollToTop");
+  		if (window.pageYOffset > document.documentElement.clientHeight) {
+     	scrollElem.style.opacity = "1";
+   		} else {
+       	scrollElem.style.opacity = "0";
+   }
+}
+	var timeOut;
+function goUp() {
+      window.scrollTo(pageXOffset,0);}
+	</script>
+
+</body>
+</html>
