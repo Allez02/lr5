@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание №7</title>
+	<style type="text/css">
+		.but{
+			height: 100px;
+			width:	100px;
+			background-color: orange;
+			
+
+		
+		}
+		.tabl{
+
+		}
+
+	</style>
+</head>
+<body>	
+	<div class="tabl"></div>
+		<button class="but" id='1' onclick="step(1)"></button>
+		<button class="but" id='2' onclick="step(2)"></button>
+		<button class="but" id='3' onclick="step(3)"></button> <br>
+		<button class="but" id='4' onclick="step(4)"></button>
+		<button class="but" id='5' onclick="step(5)"></button>
+		<button class="but" id='6' onclick="step(6)"></button><br>
+		<button class="but" id='7' onclick="step(7)"></button>
+		<button class="but" id='8' onclick="step(8)"></button>
+		<button class="but" id='9' onclick="step(9)"></button> <br>
+		<button onclick="reset()" style="background-color: red;width: 100px;height: 100px;margin-top: 30px;background-image:url('rel.png');background-size: contain;padding: 5px;"></button>
+		<div id='text'></div>
+
+	<script type="text/javascript">
+		let step_num=0;
+		function step(i) {
+			let k =1
+			let q=1;
+			if(step_num%2==0){
+				document.getElementById(i).style.backgroundImage = "url('x.png')"
+				document.getElementById(i).value='x'
+				document.getElementById(i).disabled = true;
+				step_num+=1;
+				if(win_or_lose()== true){
+					while(q==1) {
+						k =Math.floor(Math.random() * (9 - 1)) + 1;
+						if(document.getElementById(k).disabled == false){
+							step(k)
+							q=0
+							break
+						}
+					}
+				}
+
+				
+			
+
+				
+			}else{
+
+				document.getElementById(i).style.backgroundImage = "url('z.png')"
+				document.getElementById(i).value='o'
+				document.getElementById(i).disabled = true;
+				step_num+=1;
+
+				win_or_lose()
+			}
+		
+		}
+		function reset() {
+			location.reload(true)
+  		}
+  		function win_or_lose(){
+  			one=document.getElementById("1").value
+  			two=document.getElementById("2").value
+  			three=document.getElementById("3").value
+
+  			four=document.getElementById("4").value
+  			five=document.getElementById("5").value
+  			six=document.getElementById("6").value
+
+  			seven=document.getElementById("7").value
+  			eight=document.getElementById("8").value
+  			nine=document.getElementById("9").value
+
+  			if ((one=='x' & two=='x' & three=='x')||(four=='x' && five=='x' & six=='x')||(seven=='x' && eight=='x' & nine=='x')||(one=='x' && four=='x' && seven=='x')||(two=='x' && five=='x' && eight=='x')||(three=='x' && six=='x' && nine=='x')||(one=='x' && five=='x' && nine=='x')||(three=='x' && five=='x' && seven=='x')){
+  				const wintext = document.createElement("H1");
+  				wintext.innerHTML="Вы выйграли";
+  				wintext.style.color='green';
+  				document.getElementById('text').appendChild(wintext)
+  				end();
+  			}
+  			else if((one=='o' && two=='o' && three=='o')||(four=='o' && five=='o' && six=='o')||(seven=='o' && eight=='o' && nine=='o')||(one=='o' && four=='o' && seven=='o')||(two=='o' && five=='o' && eight=='o')||(three=='o' && six=='o' && nine=='o')||(one=='o' && five=='o' && nine=='o')||(three=='o' && five=='o' && seven=='o')){
+  				const wintext = document.createElement("H1");
+  				wintext.innerHTML="Вы проиграли";
+  				wintext.style.color='red';
+  				document.getElementById('text').appendChild(wintext)
+  				end();
+
+  			}
+  			else if(step_num==9){
+  				const wintext = document.createElement("H1");
+  				wintext.innerHTML="Ничья";
+  				wintext.style.color='yellow';
+  				document.getElementById('text').appendChild(wintext)
+  				end();
+
+  			}
+  			else{
+  				return true
+  			}
+  			
+
+  		}
+	function end() {
+		one=document.getElementById("1").disabled=true;
+  			two=document.getElementById("2").disabled=true;
+  			three=document.getElementById("3").disabled=true;
+
+  			four=document.getElementById("4").disabled=true;
+  			five=document.getElementById("5").disabled=true;
+  			six=document.getElementById("6").disabled=true;
+
+  			seven=document.getElementById("7").disabled=true;
+  			eight=document.getElementById("8").disabled=true;
+  			nine=document.getElementById("9").disabled=true;
+	}
+	</script>
+</body>
+</html>

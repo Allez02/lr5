@@ -1,12 +1,4 @@
-body{
-    background:#939393;
-    height: 2000px;
-}
-.crest {
-    background: orange;
-    width: 60px;
-    height: 60px;
-}
+
 #calc-contain{
     border: 2px solid #2E2E2E;
     float: left;
@@ -14,9 +6,11 @@ body{
     padding: 20px 20px 100px 20px;
     width: 300px;
     height: 360px;
+	background: DarkGrey;
  }
 
 input[type=text]{
+
     margin-top: -11px;
     margin-bottom: 5px;
     font-size: 60px;
@@ -27,10 +21,11 @@ input[type=text]{
     background: #939393;
     color: #000000;
     text-align: right;
-    border-bottom: 2px solid #000000;
+    border: 2px solid #000000;
     margin-left: -10px;
 }
 #C{
+	border: 2px solid #2E2E2E;
     width: 213px;
     height: 60px;
     color: #FFFFFF;
@@ -43,6 +38,7 @@ input[type=text]{
     margin-right: 11px;
 }
 .delit{
+	border: 2px solid #2E2E2E;
     width: 60px;
     height: 60px;
     color: #FFFFFF;
@@ -58,6 +54,7 @@ input[type=text]{
     margin-bottom: 10px;
 }
 #nol{
+	border: 2px solid #2E2E2E;
     width: 213px;
     height: 60px;
     color: #FFFFFF;
@@ -71,6 +68,7 @@ input[type=text]{
     margin-top: 6px;
 }
 #ravno{
+	border: 2px solid #2E2E2E;
     width: 60px;
     height: 60px;
     color: #FFFFFF;
@@ -82,58 +80,3 @@ input[type=text]{
     border-width: 1px;
     margin-left: 0px;
 }
-.soderj{
-    width: 500px;
-    height: 1500px;
-    background-color: #939393;
-    margin:auto;
-    margin-top: 1000px;
-    margin-bottom: 15px;
-        }
-.soderj2{
-    width: 500px;
-    height: 1500px;
-    background-color: #939393;
-    margin:auto;
-        }
-#scrollToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    opacity: 0;
-    background-color: #30bf48;
-    height: 50px;
-    width: 50px;
-    font-size: 25px;
-    font-style: bold;
-    text-align: center;
-    border-radius: 5px;
-}
-@media (max-width: 1200px;){
-#scrollToTop{
-	display: none;
-            }
-        }
-        @media (min-width: 1500px; max-width: 1799px;){
-            #scrollToTop{
-                display: none;
-            }
-        }
-        @media(min-width: 1800px){
-            #scrollToTop {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-weight: bold;
-        cursor: pointer;
-        opacity: 0;
-        background-color: #30bf48;
-        height: 50px;
-        width: 50px;
-        font-size: 25px;
-        font-style: bold;
-        text-align: center;
-        border-radius: 5px;
-        }
